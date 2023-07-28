@@ -1,0 +1,43 @@
+{% include "header.html" %}
+    <section id="cafe-section">
+        <div class="cafe-page">
+            <div class="overview">
+                <img class="cafe-img" src="{{ cafe.img_url }}" alt="cafe image">
+                <div class="name-container" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <a class="map-link text-decoration-none" href="{{ cafe.map_url }}" target="_blank"><i class="map-icon" data-feather="map-pin"></i>  View on map</a>
+                    <h1 class="cafe-name mt-4">{{ cafe.name }}</h1>
+                </div>
+            </div>
+            <h1 class="facility-heading" data-aos="flip-up" data-aos-duration="1500">CAFE FACILITIES</h1>
+            <hr>
+            <div class="facility-container">
+                <div class="facility-side">
+                    <img class="sticker1" src="https://media3.giphy.com/media/ZDNQdzCUjIK9VNUE2c/giphy.gif?cid=ecf05e47w1q7583grhwqiu8f3cimb6igcrqd1yrlmq1qhpbv&rid=giphy.gif&ct=s" alt="coffee-sticker">
+                </div>
+                <div class="facility-middle">
+                    <p class="facility" data-aos="fade-up">This Cafe is Located in {{ cafe.location }}.</p><br>
+
+                    <p class="facility" data-aos="fade-up">Coffee starts at {{ cafe.coffee_price }} here.</p><br>
+
+                    <p class="facility" data-aos="fade-up">{{ cafe.seats }} seats available here.</p><br>
+
+                    <p class="facility" data-aos="fade-up">{% if cafe.has_wifi %}Stable wifi with good internet speed. <i class="cafe-icon mb-2" data-feather="wifi" style="color: green;"></i>{% else %}No wifi available here. <i class="cafe-icon ms-3 mb-2" data-feather="wifi-off" style="color: red;"></i>{% endif %}</p><br>
+
+                    <p class="facility" data-aos="fade-up">{% if cafe.has_sockets %}Charging sockets are available.<i class="cafe-icon mb-2" data-feather="zap" style="color: green;"></i>{% else %}No sockets available here. <i class="cafe-icon ms-3 mb-2" data-feather="zap-off" style="color: red;"></i>{% endif %}</p><br>
+
+                    <p class="facility" data-aos="fade-up">{% if cafe.has_toilet %}Male and Female restrooms are available. <i class="cafe-icon mb-2" data-feather="user" style="color: green;"></i>{% else %}No restrooms available here. <i class="cafe-icon ms-3 mb-2" data-feather="user-x" style="color: red;"></i>{% endif %}</p><br>
+
+                    <p class="facility" data-aos="fade-up">{% if cafe.can_take_calls %}Audio/Video calls are allowed here. <i class="cafe-icon mb-2" data-feather="phone-call" style="color: green;"></i>{% else %}Calls are not allowed here. <i class="cafe-icon ms-3 mb-2" data-feather="phone-off" style="color: red;"></i>{% endif %}</p><br>
+                </div>
+                <div class="facility-side">
+                    <img class="sticker2" src="https://media3.giphy.com/media/feQRYLoruyjguhLjK1/200.webp?cid=ecf05e47c3rwzrosugppivdd5ceyrgc35jejhee2cn7s7x06&rid=200.webp&ct=s" alt="wifi-sticker">
+                </div>
+            </div>
+            <hr>
+            <div class="btn-container">
+                <a class="cafe-btn btn btn-lg btn-outline-light" data-aos="flip-up"><span class="cafe-btn-text">Delete Cafe</span><i class="cafe-btn-icon ms-2 mb-1" data-feather="x-octagon" style="color: red;"></i></a>
+                <a class="cafe-btn btn btn-lg btn-outline-light" href="{{ url_for('add_cafe', edit='y', id=cafe.id) }}" data-aos="flip-up"><span class="cafe-btn-text">Edit Cafe</span><i class="cafe-btn-icon ms-2 mb-1" data-feather="edit"></i></a>
+            </div>
+        </div>
+    </section>
+{% include "footer.html" %}

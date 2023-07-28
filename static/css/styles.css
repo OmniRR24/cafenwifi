@@ -1,0 +1,498 @@
+html {
+overflow-x: hidden
+}
+
+hr {
+    color: #fff;
+    height: 20px;
+    border-width: 5px;
+}
+
+.navbar {
+    background-color: #3C2A21;
+    padding: 1rem 0 .7rem;
+}
+
+.navbar-brand {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-link {
+  font-size: clamp(.45rem, 1.3vw, 1.05rem);
+  font-family: "Montserrat-Light", sans-serif;
+  color: #fff;
+  opacity: .85;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.search-bar {
+    background-color: #fff;
+    color: #1A120B;
+    width: 22vw;
+}
+
+.search-bar:focus {
+    background-color: #fff;
+    border-color: #1A120B;
+}
+
+.search-btn {
+--bs-btn-color: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #3C2A21;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-focus-shadow-rgb: 248, 249, 250;
+  --bs-btn-active-color: #3C2A21;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #fff;
+  --bs-gradient: none;
+}
+
+/* HOME PAGE */
+
+.page-container {
+    background-color: #1A120B;
+    padding: 8% 13%;
+    color: #fff;
+}
+
+.page-heading {
+    font-size: clamp(2.2rem, 2.9vw, 2.9rem);
+    font-family: 'Bree Serif', serif;
+}
+
+.page-content {
+    padding: 5% 8%;
+}
+
+.desc-text {
+    font-family: "Montserrat-Light", sans-serif;
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+}
+
+.cafe-card {
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cafe-card hr {
+    color: #3C2A21;
+}
+
+.cafe-link:hover {
+    opacity: .9;
+}
+
+.home-cafe-img {
+    width: 37%;
+    height: 15rem;
+}
+
+.cafe-desc{
+    text-align: left;
+    font-family: 'Bree Serif', serif;
+    color: #3C2A21;
+}
+
+/* CAFE PAGE */
+.cafe-page {
+    background-color: #1A120B;
+    padding-bottom: 8%;
+}
+
+.cafe-img {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+}
+
+.overview {
+    position: relative;
+}
+
+.name-container {
+    position: absolute;
+    bottom: 20%;
+    margin-left: 13.5%;
+    font-family: 'Bree Serif', serif;
+    color: #fff;
+}
+
+.map-link {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: .85;
+}
+
+.map-link:hover {
+    opacity: 1;
+}
+
+.cafe-name {
+    font-size: 3rem;
+}
+
+.facility-container {
+    color: #fff;
+    font-family: "Montserrat-Light", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-around;
+    padding: 2% 0;
+}
+
+.facility-heading {
+    font-size: 4.4rem;
+    letter-spacing: .2em;
+    font-family: 'Bree Serif', serif;
+    color: #fff;
+    text-align: center;
+    margin: 3% 0;
+}
+
+.facility {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+    font-family: "Montserrat-Light", sans-serif;
+}
+
+.sticker1 {
+    width: 25vw;
+    margin-top: 13vh;
+}
+
+.sticker2 {
+    width: 19vw;
+    margin-top: 23vh;
+}
+
+.cafe-icon {
+    width: 2.65rem;
+    height: 2.65rem;
+    margin-left: .2em;
+}
+
+
+/* ADD CAFE PAGE */
+
+.add-cafe-container {
+    background-color: #1A120B;
+}
+
+.cafe-form {
+    width: 75%;
+    margin: 5% auto;
+    padding: 10% 7%;
+    background-color: #fff;
+    border: 2px solid #3C2A21;
+    border-radius: 10px;
+    font-family: "Montserrat-Light", sans-serif;
+    color: #3C2A21;
+}
+
+.form-heading {
+    text-align: center;
+    font-weight: bold;
+    margin: 3% 0 12%;
+}
+
+input[type=text], input[type=url] {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #3C2A21;
+    outline: none;
+    font-family: "Montserrat-Light", sans-serif;
+    font-size: 1.1vw;
+}
+
+input[type=text]:focus, input[type=url]:focus {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #3C2A21;
+    outline: none;
+    box-shadow: none;
+}
+
+input[type=text]:focus::placeholder, input[type=url]:focus::placeholder {
+    opacity: .9;
+}
+
+input[type=text]::placeholder {
+    color: #3C2A21;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-label, input[type=url]::placeholder {
+    color: #3C2A21;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type=checkbox] {
+    height: 17px;
+    width: 17px;
+}
+
+.form-line {
+    margin-bottom: 10%;
+}
+
+.i-left {
+    margin-right: 21%;
+}
+
+.input-s {
+    width: 120%;
+    text-align: center;
+}
+
+.form-btn {
+    display: block;
+    margin: 11% auto 3%;
+    font-weight: bold;
+    font-size: 1.3vw;
+    color: #3C2A21;
+    width: 25%;
+}
+
+.form-btn:hover {
+    background-color: #3C2A21;
+}
+
+/* FOOTER */
+
+footer {
+    font-family: "Montserrat-Light", sans-serif;
+    background-color: #D5CEA3;
+    padding: 1%;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    margin: 4.5vh 0;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    color: #3C2A21;
+    opacity: .8;
+}
+
+.footer-icon:hover {
+    color: #1A120B;
+    opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+    color: #1A120B;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 992px){
+
+    .navbar-brand {
+        font-size: 4.5vw;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .brand-icon {
+        height: 5vh;
+        width: 5vw;
+    }
+
+    .collapse {
+        margin: 5vh 0 0 6vw;
+    }
+
+    .search-bar {
+        width: 50vw;
+        font-size: 3vw;
+    }
+
+    .nav-link {
+        font-size: 3vw;
+        text-decoration: underline;
+        margin-top: 4vh;
+    }
+
+    .link-icon {
+        display: none;
+    }
+
+    /* HOME PAGE */
+    .page-container {
+        padding: 10% 6vw;
+    }
+
+    .page-heading {
+        font-size: 8vw;
+    }
+
+    .page-content {
+        padding: 5% 4vw;
+    }
+
+    .cafe-container {
+        width: 75vw;
+        margin: 0 auto;
+    }
+
+    .home-cafe-img {
+        width: 100%;
+        height: 15rem;
+        margin-bottom: 5%;
+    }
+
+    /* CAFE PAGE */
+
+    .cafe-img {
+        height: 60vh;
+    }
+
+    .cafe-name {
+        font-size: 8vw;
+    }
+
+    .map-link {
+        font-size: 4vw;
+    }
+
+    .map-icon {
+        height: 4vh;
+        width: 4vw;
+    }
+
+    .facility-heading{
+        font-size: 7vw;
+    }
+
+    .facility {
+        font-size: 2vw;
+        margin: 2vh 0;
+    }
+
+    .cafe-icon {
+        width: 4vw;
+        height: 4vh;
+        margin-bottom: 0;
+    }
+
+    .sticker1 {
+        width: 30vw;
+        height: 35vh;
+    }
+
+    .sticker2 {
+        width: 25vw;
+        height: 22vh;
+    }
+
+    .cafe-btn {
+        width: 32vw;
+        height: 5vh;
+        font-size: 2.7vw;
+        padding: auto 0;
+    }
+
+    .cafe-btn-icon {
+        width: 2.8vw;
+        height: 2.8vh;
+    }
+
+    /* ADD-CAFE PAGE */
+    .cafe-form {
+        width: 85vw;
+        padding: 10% 7vw;
+    }
+
+    .form-heading {
+        font-size: 5vw;
+    }
+
+    .i-left {
+        margin-right: 7vw;
+    }
+
+    .input-s {
+        width: 30vw;
+        text-align: center;
+    }
+
+    input[type=text], input[type=url] {
+        font-size: 2vw;
+    }
+
+    .form-label, input[type=url]::placeholder, input[type=text]::placeholder {
+        font-size: 2.5vw;
+    }
+
+    input[type=checkbox] {
+        height: 3vh;
+        width: 3vw;
+    }
+
+    .form-btn {
+        margin: 11% auto 3%;
+        width: 25vw;
+        font-size: 2.5vw;
+    }
+
+    /* FOOTER */
+    .footer-icon {
+        width: 6vw;
+        height: 6vh;
+    }
+
+    .copyright {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 415px){
+
+    /* HOME PAGE */
+    .cafe-container {
+        width: 100%;
+    }
+
+
+    /* CAFE PAGE */
+
+}

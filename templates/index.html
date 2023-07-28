@@ -1,0 +1,41 @@
+{% include "header.html" %}
+
+<!--Home Section-->
+<section id="home">
+    <div class="page-container">
+        <h1 class="page-heading" data-aos="fade-down-right" data-aos-duration="1500">{{ header }}</h1>
+        <div class="page-content">
+            {% if not_found %}
+                <h5 class="desc-text" data-aos="flip-right" data-aos-duration="1500">
+                    Oops! Try searching for a different location.
+                </h5>
+            {% else %}
+                <h5 class="desc-text" data-aos="flip-right" data-aos-duration="1500">
+                    The best work and study-friendly cafes, restaurants, and hotel lobbies{% if header != 'ALL CAFES' %} in {{header.title()}}{% endif %}. Find venues with free and reliable Wi-Fi hotspots, ample power sockets, and comfy seating areas.
+                </h5>
+            {% endif %}
+            {% for cafe in cafes %}
+                <a class="text-decoration-none cafe-link" href="{{ url_for('show_cafe', cafe_id=cafe.id, cafe_name=cafe.name) }}">
+                    <div class="cafe-card py-4 px-4 my-5"
+                         data-aos="{% if cafe.id % 2 == 0 %}fade-up-right{% else %}fade-up-left{% endif %}"
+                         data-aos-duration="{% if cafes.index(cafe) == 0 %}1500{% endif %}"
+                    >
+                        <hr class="mx-auto">
+                        <div class="row cafe-container">
+                            <img class="home-cafe-img col-lg-6 mb-3" src="{{cafe.img_url}}" alt="cafe image">
+                            <div class="cafe-desc col-lg-6 mx-auto my-auto">
+                                <h1>{{ cafe.name }}</h1>
+                                <h4 class="my-3">Location: {{ cafe.location }}</h4>
+                                <h4>Coffee Price: {{ cafe.coffee_price }}</h4>
+                            </div>
+                        </div>
+                        <hr class="mx-auto">
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--Home Section-->
+
+{% include "footer.html" %}
