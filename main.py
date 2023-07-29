@@ -147,7 +147,7 @@ def update_price(cafe_id):
 @app.route('/report-closed/<int:cafe_id>', methods=['DELETE'])
 def delete(cafe_id):
     cafe_to_delete = Cafe.query.get(cafe_id)
-    if request.args.get('api_key') == "TopSecretAPIKey":
+    if request.args.get('api_key') == os.environ.get('API-KEY'):
         if cafe_to_delete:
             db.session.delete(cafe_to_delete)
             db.session.commit()
