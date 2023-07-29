@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from random import choice
 app = Flask(__name__)
 
-##Connect to Database
+##Connect to Database.
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafe-website.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
