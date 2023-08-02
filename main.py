@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, render_template, request, redirect, url_for
+from gevent.pywsgi import WSGIServer
 from flask_sqlalchemy import SQLAlchemy
 from random import choice
 import os
@@ -243,4 +244,7 @@ def save_cafe():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use Greenlet with gevent to run the app
+    http_server = WSGIServer(('0.0.0.0', 5000), app)
+    http_server.serve_forever()
+    # app.run(debug=True)
