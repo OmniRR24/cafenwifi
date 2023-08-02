@@ -245,6 +245,7 @@ def save_cafe():
 
 if __name__ == '__main__':
     # Use Greenlet with gevent to run the app
-    http_server = WSGIServer(('0.0.0.0', 5000), app)
+    port = int(os.environ.get('PORT', 5000))
+    http_server = WSGIServer(('0.0.0.0', port), app)
     http_server.serve_forever()
     # app.run(debug=True)
