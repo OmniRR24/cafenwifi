@@ -3,18 +3,15 @@ from gevent.pywsgi import WSGIServer
 from flask_sqlalchemy import SQLAlchemy
 from random import choice
 import os
-app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
-##Connect to Database
-# uri = os.environ.get('DATABASE_URL')
-# app.config['SQLALCHEMY_DATABASE_URI'] = uri.replace("postgres://", "postgresql://", 1)
+app = Flask(__name__)
+
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafe-website.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-##Cafe TABLE Configuration
 class Cafe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), unique=True, nullable=False)
@@ -165,7 +162,7 @@ def save_edit(cafe):
     cafe.img_url = request.form.get("img_url")
     cafe.location = request.form.get("loc").title()
     cafe.seats = request.form.get("seats")
-    # checkbutton(btn_list=['wifi', 'toilet', 'sockets', 'calls'], par_list=[cafe.has_wifi, cafe.has_toilet, cafe.has_sockets, cafe.can_take_calls])
+
     if request.form.get("wifi") == 'on':
         cafe.has_wifi = True
     else:
@@ -222,30 +219,8 @@ def save_cafe():
 
     return new_cafe
 
-# def checkbutton(btn_list, par_list):
-#     n = 0
-#     for btn in btn_list:
-#         if request.form.get(btn) == 'on':
-#             par_list[n] = 'True'
-#         else:
-#             par_list[n] = False
-#         n += 1
-
-
-
-
-
-
-## HTTP POST - Create Record
-
-## HTTP PUT/PATCH - Update Record
-
-## HTTP DELETE - Delete Record
-
 
 if __name__ == '__main__':
-    # Use Greenlet with gevent to run the app
     port = int(os.environ.get('PORT', 5000))
     http_server = WSGIServer(('0.0.0.0', port), app)
     http_server.serve_forever()
-    # app.run(debug=True)

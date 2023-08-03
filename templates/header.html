@@ -8,7 +8,7 @@
 
 <!--  Bootstrap CDN-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <!-- Custom Styles-->
@@ -26,33 +26,72 @@
 
 <body>
 <!--  Navigation Bar-->
-  <nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid">
+<!--  <nav class="navbar navbar-expand-lg sticky-top">-->
+<!--  <div class="container-fluid">-->
+<!--    <span class="navbar-brand ms-5">-->
+<!--      <span class="me-0">Cafe & Wifi</span>-->
+<!--      <i class="brand-icon mb-2 ms-1" data-feather="wifi"></i>-->
+<!--    </span>-->
+<!--    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+
+<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--      <form class="d-flex mx-auto search-container" role="search" action="{{ url_for('search_results') }}">-->
+<!--        <input class="form-control me-2 search-bar" type="search" placeholder="Search locations" aria-label="Search" name="loc" id="search">-->
+<!--        <button class="btn search-btn" type="submit">-->
+<!--          <i data-feather="search"></i>-->
+<!--        </button>-->
+<!--      </form>-->
+<!--      <ul class="navbar-nav mb-2 mb-lg-0 me-5">-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link me-4"href="/"><i class="link-icon me-1 mb-1" data-feather="globe"></i><span>All Cafes</span></a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link me-4" href="{{ url_for('add_cafe', edit='n', id=0) }}"><i class="link-icon me-1 mb-1" data-feather="plus-circle"></i><span>Add Cafe</span></a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+<!--    Logo-->
     <span class="navbar-brand ms-5">
-      <span class="me-0">Cafe & Wifi</span>
-      <i class="brand-icon mb-2 ms-1" data-feather="wifi"></i>
+      <span class="me-0">Cafe & Wifi <i class="brand-icon mb-2 ms-1" data-feather="wifi"></i></span>
     </span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!--    Toggle btn-->
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+<!--    Side bar-->
+    <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header text-white border-bottom">
+        <span class="offcanvas-title" id="offcanvasNavbarLabel">Cafe & Wifi <i class="side-icon mb-2 ms-1" data-feather="wifi"></i></span>
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="d-flex mx-auto search-container" role="search" action="{{ url_for('search_results') }}">
-        <input class="form-control me-2 search-bar" type="search" placeholder="Search locations" aria-label="Search" name="loc" id="search">
-        <button class="btn search-btn" type="submit">
-          <i data-feather="search"></i>
-        </button>
-      </form>
-      <ul class="navbar-nav mb-2 mb-lg-0 me-5">
+      <div class="offcanvas-body">
+        <form class="d-flex mx-auto search-container" role="search" action="{{ url_for('search_results') }}">
+          <input class="form-control me-2 search-bar" type="search" placeholder="Search locations" aria-label="Search" name="loc" id="search">
+          <button class="btn search-btn" type="submit">
+            <i data-feather="search"></i>
+          </button>
+        </form>
+        <ul class="navbar-nav justify-content-end align-items-center pe-3">
         <li class="nav-item">
-          <a class="nav-link me-4"href="/"><i class="link-icon me-1 mb-1" data-feather="globe"></i><span>All Cafes</span></a>
+          <a class="nav-link mx-2" href="/"><i class="link-icon me-1 mb-1" data-feather="globe"></i><span>All Cafes</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link me-4" href="{{ url_for('add_cafe', edit='n', id=0) }}"><i class="link-icon me-1 mb-1" data-feather="plus-circle"></i><span>Add Cafe</span></a>
+          <a class="nav-link mx-2" href="{{ url_for('add_cafe', edit='n', id=0) }}"><i class="link-icon me-1 mb-1" data-feather="plus-circle"></i><span>Add Cafe</span></a>
         </li>
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
 <!--Navigation Bar-->
+
+<!--mb-2 mb-lg-0 me-5-->
 

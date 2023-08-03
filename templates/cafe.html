@@ -15,15 +15,15 @@
                     <img class="sticker1" src="https://media3.giphy.com/media/ZDNQdzCUjIK9VNUE2c/giphy.gif?cid=ecf05e47w1q7583grhwqiu8f3cimb6igcrqd1yrlmq1qhpbv&rid=giphy.gif&ct=s" alt="coffee-sticker">
                 </div>
                 <div class="facility-middle">
-                    <p class="facility" data-aos="fade-up">This Cafe is Located in {{ cafe.location }}.</p><br>
+                    <p class="facility" data-aos="fade-up">This cafe is located in {{ cafe.location }}.</p><br>
 
                     <p class="facility" data-aos="fade-up">Coffee starts at {{ cafe.coffee_price }} here.</p><br>
 
                     <p class="facility" data-aos="fade-up">{{ cafe.seats }} seats available here.</p><br>
 
-                    <p class="facility" data-aos="fade-up">{% if cafe.has_wifi %}Stable wifi with good internet speed. <i class="cafe-icon mb-2 ms-3" data-feather="wifi" style="color: green;"></i>{% else %}No wifi available here. <i class="cafe-icon ms-3 mb-2" data-feather="wifi-off" style="color: red;"></i>{% endif %}</p><br>
+                    <p class="facility" data-aos="fade-up">{% if cafe.has_wifi %}Stable Wi-Fi with good internet speed. <i class="cafe-icon mb-2 ms-3" data-feather="wifi" style="color: green;"></i>{% else %}No Wi-Fi available here. <i class="cafe-icon ms-3 mb-2" data-feather="wifi-off" style="color: red;"></i>{% endif %}</p><br>
 
-                    <p class="facility" data-aos="fade-up">{% if cafe.has_sockets %}Charging sockets are available.<i class="cafe-icon mb-2 ms-3" data-feather="zap" style="color: green;"></i>{% else %}No sockets available here. <i class="cafe-icon ms-3 mb-2" data-feather="zap-off" style="color: red;"></i>{% endif %}</p><br>
+                    <p class="facility" data-aos="fade-up">{% if cafe.has_sockets %}Charging outlets are available.<i class="cafe-icon mb-2 ms-3" data-feather="zap" style="color: green;"></i>{% else %}No charging outlets available here. <i class="cafe-icon ms-3 mb-2" data-feather="zap-off" style="color: red;"></i>{% endif %}</p><br>
 
                     <p class="facility" data-aos="fade-up">{% if cafe.has_toilet %}Male and Female restrooms are available. <i class="cafe-icon mb-2 ms-3" data-feather="user" style="color: green;"></i>{% else %}No restrooms available here. <i class="cafe-icon ms-3 mb-2" data-feather="user-x" style="color: red;"></i>{% endif %}</p><br>
 

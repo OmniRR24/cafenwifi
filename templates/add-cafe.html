@@ -1,28 +1,63 @@
 {% include "header.html" %}
 <div class="page-container">
     <h1 class="page-heading" data-aos="fade-down-right" data-aos-duration="1500">{{header}}</h1>
-    <form class="cafe-form" data-aos="flip-right" data-aos-duration="1500" method="post">
+    <form class="cafe-form needs-validation" data-aos="flip-right" data-aos-duration="1500" method="post" novalidate>
         <h1 class="form-heading">Input Cafe Details</h1>
         {% if cafe %}
             <div class="row form-row">
-              <div class="col-lg-6">
-                  <input class="form-control form-input" placeholder="Cafe Name" value="{{cafe.name}}" type="text" disabled>
+              <div class="col-lg-6 form-input">
+                  <input class="form-control" placeholder="Cafe Name" value="{{cafe.name}}" type="text" disabled>
               </div>
-              <div class="col-lg-6">
-                <input class="form-control form-input" placeholder="Cafe Location" value="{{cafe.location}}" type="text" name="loc">
+              <div class="col-lg-6 form-input">
+                <input class="form-control" placeholder="Cafe Location" value="{{cafe.location}}" type="text" name="loc" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a location!
+                </div>
               </div>
             </div>
 
-            <input class="form-control form-input form-row" placeholder="Map Url" value="{{cafe.map_url}}" type="url" data-aos="fade-down" name="map_url">
-            <input class="form-control form-input form-row" placeholder="Image Url" value="{{cafe.img_url}}" type="url" data-aos="fade-down" name="img_url">
+            <div class="form-input form-row">
+                <input class="form-control" placeholder="Map Url" value="{{cafe.map_url}}" type="url" data-aos="fade-down" name="map_url" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid map url!
+                </div>
+            </div>
+            <div class="form-input form-row">
+                <input class="form-control" placeholder="Image Url" value="{{cafe.img_url}}" type="url" data-aos="fade-down" name="img_url" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid image url!
+                </div>
+            </div>
 
             <div class="row form-row">
-              <div class="col-lg-6">
-                <input class="form-control form-input" type="text" placeholder="Coffee Price" value="{{cafe.coffee_price}}" data-aos="fade-down" name="price">
-              </div>
-              <div class="col-lg-6">
-                <input class="form-control form-input" type="text" placeholder="Seats Available" value="{{cafe.seats}}" data-aos="fade-down" name="seats">
-              </div>
+                <div class="col-lg-6 form-input" data-aos="fade-down" >
+                   <input class="form-control" type="text" placeholder="Coffee Price" value="{{cafe.coffee_price}}" data-aos="fade-down" name="price" required>
+                   <div class="valid-feedback">
+                      Looks good!
+                   </div>
+                   <div class="invalid-feedback">
+                      Please provide a coffee price!
+                   </div>
+                </div>
+
+                <div class="col-lg-6 form-input" data-aos="fade-down" >
+                    <input class="form-control" type="text" placeholder="Seats Available" value="{{cafe.seats}}" data-aos="fade-down" name="seats" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide number of seats!
+                    </div>
+                </div>
             </div>
 
             <div class="checkbox-container">
@@ -41,23 +76,63 @@
             </div>
         {% else %}
             <div class="row form-row">
-              <div class="col-lg-6">
-                  <input class="form-control form-input" placeholder="Cafe Name" type="text" name="name" required>
+              <div class="col-lg-6 form-input">
+                  <input class="form-control" placeholder="Cafe Name" type="text" name="name" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+                   <div class="invalid-feedback">
+                      Please provide a name!
+                   </div>
               </div>
-              <div class="col-lg-6">
-                <input class="form-control form-input" placeholder="Cafe Location" type="text" name="loc" required>
+              <div class="col-lg-6 form-input">
+                <input class="form-control" placeholder="Cafe Location" type="text" name="loc" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+                    <div class="invalid-feedback">
+                      Please provide a location!
+                   </div>
               </div>
             </div>
 
-            <input class="form-control form-input form-row" placeholder="Map Url" type="url" data-aos="fade-down" name="map_url" required>
-            <input class="form-control form-input form-row" placeholder="Image Url" type="url" data-aos="fade-down" name="img_url" required>
+            <div class="form-input form-row">
+                <input class="form-control" placeholder="Map Url" type="url" data-aos="fade-down" name="map_url" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid map url!
+                </div>
+            </div>
+            <div class="form-input form-row">
+                <input class="form-control" placeholder="Image Url" type="url" data-aos="fade-down" name="img_url" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid image url!
+                </div>
+            </div>
 
             <div class="row form-row">
-              <div class="col-lg-6">
-                <input class="form-control form-input" type="text" placeholder="Coffee Price" data-aos="fade-down" name="price" required>
+              <div class="col-lg-6 form-input" data-aos="fade-down" >
+                <input class="form-control" type="text" placeholder="Coffee Price" name="price" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+                   <div class="invalid-feedback">
+                      Please provide a coffee price!
+                   </div>
               </div>
-              <div class="col-lg-6">
-                <input class="form-control form-input" type="text" placeholder="Seats Available" data-aos="fade-down" name="seats" required>
+              <div class="col-lg-6 form-input" data-aos="fade-down" >
+                <input class="form-control" type="text" placeholder="Seats Available" name="seats" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                  </div>
+                   <div class="invalid-feedback">
+                      Please provide number of seats!
+                   </div>
               </div>
             </div>
 
