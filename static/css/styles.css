@@ -389,7 +389,7 @@ footer {
     }
 
     .facility-heading{
-        font-size: 9vw;
+        font-size: 8vw;
         margin: 10% 0;
     }
 
@@ -399,19 +399,19 @@ footer {
     }
 
     .cafe-icon {
-        width: 1.35rem;
-        height: 1.35rem;
+        width: 1.4rem;
+        height: 1.4rem;
         margin-bottom: 0;
     }
 
     .sticker1 {
         width: 30vw;
-        height: 35vh;
+        height: 30vh;
     }
 
     .sticker2 {
-        width: 25vw;
-        height: 22vh;
+        width: 24vw;
+        height: 18vh;
     }
 
     .cafe-btn {
@@ -460,8 +460,8 @@ footer {
 
     .form-btn {
         margin: 11% auto 3%;
-        width: 25vw;
-        font-size: 3.5vw;
+        width: 30vw;
+        font-size: 3.7vw;
     }
 
     /* FOOTER */
