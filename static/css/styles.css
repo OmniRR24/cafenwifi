@@ -522,7 +522,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 415px){
+@media only screen and (max-width: 450px){
     .navbar-brand {
         font-size: 6vw;
         font-weight: bold;
