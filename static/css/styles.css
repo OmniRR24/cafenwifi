@@ -196,11 +196,6 @@ hr {
 
 
 /* ADD CAFE PAGE */
-
-.add-cafe-container {
-    background-color: #1A120B;
-}
-
 .cafe-form {
     width: 75%;
     margin: 5% auto;
@@ -243,7 +238,6 @@ input[type=text]::placeholder {
     color: #3C2A21;
     font-size: 1.2vw;
     font-weight: bold;
-    text-align: center;
 }
 
 .form-label, input[type=url]::placeholder {
@@ -262,16 +256,11 @@ input[type=checkbox] {
     width: 17px;
 }
 
-.form-line {
+.form-row {
     margin-bottom: 10%;
 }
 
-.i-left {
-    margin-right: 21%;
-}
-
-.input-s {
-    width: 120%;
+.form-input {
     text-align: center;
 }
 
@@ -400,17 +389,18 @@ footer {
     }
 
     .facility-heading{
-        font-size: 7vw;
+        font-size: 9vw;
+        margin: 10% 0;
     }
 
     .facility {
-        font-size: 2vw;
+        font-size: 1rem;
         margin: 2vh 0;
     }
 
     .cafe-icon {
-        width: 4vw;
-        height: 4vh;
+        width: 1.35rem;
+        height: 1.35rem;
         margin-bottom: 0;
     }
 
@@ -443,35 +433,35 @@ footer {
     }
 
     .form-heading {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
-    .i-left {
-        margin-right: 7vw;
+    .form-row {
+        margin: 0;
     }
 
-    .input-s {
-        width: 30vw;
-        text-align: center;
+    .form-input {
+        width: 100%;
+        margin-bottom: 15%;
     }
 
     input[type=text], input[type=url] {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .form-label, input[type=url]::placeholder, input[type=text]::placeholder {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
 
     input[type=checkbox] {
-        height: 3vh;
-        width: 3vw;
+        height: 3.5vh;
+        width: 3.5vw;
     }
 
     .form-btn {
         margin: 11% auto 3%;
         width: 25vw;
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
 
     /* FOOTER */
