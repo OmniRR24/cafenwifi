@@ -76,11 +76,11 @@ def search():
 
 @app.route('/search-results')
 def search_results():
-    query_location = request.args.get("loc").title()
+    query_location = request.args.get("loc").strip().title()
     if query_location == '':
         return redirect(url_for('home'))
     else:
-        cafes = db.session.query(Cafe).filter_by(location=str(query_location)).all()
+        cafes = db.session.query(Cafe).filter_by(location=query_location).all()
         if cafes:
             heading = query_location.upper()
             not_found = False
